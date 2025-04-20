@@ -1,0 +1,25 @@
+#include <windows.h>
+#include <thread>
+#include <chrono>
+
+void InvertColors() {
+    HDC hdc = GetDC(NULL);
+    RECT rect;
+    GetClientRect(GetDesktopWindow(), &rect);
+
+    BitBlt(hdc, 0, 0, rect.right, rect.bottom, hdc, 0, 0, NOTSRCCOPY);
+    ReleaseDC(NULL, hdc);
+}
+
+int main() {
+    MessageBox(NULL, "This GDI is based on MEMZ.exe", "MEMZ-GDI", MB_OK | MB_ICONINFORMATION);
+
+    while (true) {
+        InvertColors();
+        std::this_thread::sleep_for(std::chrono::seconds(3));
+        InvertColors();
+        std::this_thread::sleep_for(std::chrono::seconds(20));
+    }
+
+    return 0;
+}
